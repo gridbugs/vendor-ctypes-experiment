@@ -1,0 +1,167 @@
+opam-version: "2.0"
+synopsis: "opam-monorepo generated lockfile"
+maintainer: "opam-monorepo"
+depends: [
+  "base-bigarray" {= "base"}
+  "base-bytes" {= "base+dune" & ?vendor}
+  "base-domains" {= "base"}
+  "base-nnp" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "bigarray-compat" {= "1.1.0" & ?vendor}
+  "conf-libmpg123" {= "1"}
+  "conf-pkg-config" {= "2"}
+  "csexp" {= "1.5.1" & ?vendor}
+  "ctypes" {= "0.20.1+dune" & ?vendor}
+  "ctypes-foreign" {= "0.20.1+dune" & ?vendor}
+  "dune" {= "3.6.1"}
+  "dune-configurator" {= "3.6.1" & ?vendor}
+  "integers" {= "0.7.0" & ?vendor}
+  "mpg123" {= "0.3" & ?vendor}
+  "ocaml" {= "5.0.0"}
+  "ocaml-base-compiler" {= "5.0.0"}
+  "ocaml-config" {= "3"}
+  "ocaml-options-vanilla" {= "1"}
+  "stdlib-shims" {= "0.3.0" & ?vendor}
+]
+depexts: [
+  ["devel/pkgconf"] {os = "openbsd"}
+  ["libffi"] {os = "macos" & os-distribution = "homebrew"}
+  ["libffi"] {os = "macos" & os-distribution = "macports"}
+  ["libffi"] {os = "win32" & os-distribution = "cygwinports"}
+  ["libffi-dev"] {os-distribution = "alpine"}
+  ["libffi-dev"] {os-distribution = "debian"}
+  ["libffi-dev"] {os-distribution = "ubuntu"}
+  ["libffi-devel"] {os-distribution = "centos"}
+  ["libffi-devel"] {os-distribution = "fedora"}
+  ["libffi-devel"] {os-distribution = "oraclelinux"}
+  ["libffi-devel"] {os-family = "suse"}
+  ["libmpg123-dev"] {os-family = "debian"}
+  ["libmpg123-dev"] {os-family = "ubuntu"}
+  ["mpg123"] {os = "freebsd"}
+  ["mpg123"] {os = "netbsd"}
+  ["mpg123"] {os = "openbsd"}
+  ["mpg123"] {os-family = "arch"}
+  ["mpg123"] {os = "macos" & os-distribution = "homebrew"}
+  ["mpg123"] {os = "macos" & os-distribution = "macports"}
+  ["mpg123-dev"] {os-family = "alpine"}
+  ["mpg123-devel"] {os-family = "centos"}
+  ["mpg123-devel"] {os-family = "fedora"}
+  ["mpg123-devel"] {os-family = "rhel"}
+  ["mpg123-devel"] {os-family = "suse"}
+  ["pkg-config"] {os-family = "debian"}
+  ["pkg-config"] {os = "macos" & os-distribution = "homebrew"}
+  ["pkgconf"] {os = "freebsd"}
+  ["pkgconf"] {os-distribution = "alpine"}
+  ["pkgconf"] {os-distribution = "arch"}
+  ["pkgconf-pkg-config"] {os-distribution = "fedora"}
+  ["pkgconf-pkg-config"] {os-distribution = "mageia"}
+  ["pkgconf-pkg-config"] {os-distribution = "centos" & os-version >= "8"}
+  ["pkgconf-pkg-config"] {os-distribution = "ol" & os-version >= "8"}
+  ["pkgconf-pkg-config"] {os-distribution = "rhel" & os-version >= "8"}
+  ["pkgconfig"] {os-distribution = "nixos"}
+  ["pkgconfig"] {os = "macos" & os-distribution = "macports"}
+  ["pkgconfig"] {os-distribution = "centos" & os-version <= "7"}
+  ["pkgconfig"] {os-distribution = "ol" & os-version <= "7"}
+  ["pkgconfig"] {os-distribution = "rhel" & os-version <= "7"}
+  ["system:pkgconf"] {os = "win32" & os-distribution = "cygwinports"}
+]
+pin-depends: [
+  [
+    "base-bytes.base+dune"
+    "https://github.com/kit-ty-kate/bytes/archive/v0.1.0.tar.gz"
+  ]
+  [
+    "bigarray-compat.1.1.0"
+    "https://github.com/mirage/bigarray-compat/releases/download/v1.1.0/bigarray-compat-1.1.0.tbz"
+  ]
+  [
+    "csexp.1.5.1"
+    "https://github.com/ocaml-dune/csexp/releases/download/1.5.1/csexp-1.5.1.tbz"
+  ]
+  [
+    "ctypes.0.20.1+dune"
+    "https://github.com/dune-universe/ocaml-ctypes/releases/download/0.20.1%2Bdune/ctypes-foreign-0.20.1.dune.tbz"
+  ]
+  [
+    "ctypes-foreign.0.20.1+dune"
+    "https://github.com/dune-universe/ocaml-ctypes/releases/download/0.20.1%2Bdune/ctypes-foreign-0.20.1.dune.tbz"
+  ]
+  [
+    "dune-configurator.3.6.1"
+    "https://github.com/ocaml/dune/releases/download/3.6.1/dune-3.6.1.tbz"
+  ]
+  [
+    "integers.0.7.0"
+    "https://github.com/yallop/ocaml-integers/archive/0.7.0.tar.gz"
+  ]
+  ["mpg123.0.3" "https://github.com/mbacarella/mpg123/archive/0.3.tar.gz"]
+  [
+    "stdlib-shims.0.3.0"
+    "https://github.com/ocaml/stdlib-shims/releases/download/0.3.0/stdlib-shims-0.3.0.tbz"
+  ]
+]
+x-opam-monorepo-duniverse-dirs: [
+  [
+    "https://github.com/dune-universe/ocaml-ctypes/releases/download/0.20.1%2Bdune/ctypes-foreign-0.20.1.dune.tbz"
+    "ocaml-ctypes"
+    [
+      "sha256=fd4ecf06c1d90931408c26708c21b7eb07bf703fdf06a793431451b7a1e8676f"
+      "sha512=241f2cf9b4dc9d352c7b5d487667dbef0d7708d025d9ae0adaab7389975ed76b67ef923d8041e4d6e3ce895d904f68ddded7812d514e117c32c4aae5fd9b5e2a"
+    ]
+  ]
+  [
+    "https://github.com/kit-ty-kate/bytes/archive/v0.1.0.tar.gz"
+    "bytes"
+    [
+      "sha256=795b9bf545841714aaf0e517b62834a589937f65ad815ed4589ea56fa614d238"
+    ]
+  ]
+  [
+    "https://github.com/mbacarella/mpg123/archive/0.3.tar.gz"
+    "mpg123"
+    [
+      "md5=a79b90c89ddbd8fc8c39142b3d5f4dde"
+      "sha512=1f92f7a001552e279f146eb14340b747eb18f6dd7ee5f66f93eab37f6dd9e3f3298475085232395404ca1ed9b8a3c94796e6d67884c18d6684010f897c3f8b42"
+    ]
+  ]
+  [
+    "https://github.com/mirage/bigarray-compat/releases/download/v1.1.0/bigarray-compat-1.1.0.tbz"
+    "bigarray-compat"
+    [
+      "sha256=434469a48d5c84e80d621b13d95eb067f8138c1650a1fd5ae6009a19b93718d5"
+      "sha512=7be283fd957ee168ce1e62835d22114da405e4b7da9619b4f2030a832d45ca210a0c8f1d1c57c92e224f3512308a8a0f0923b94f44b6f582acbe0e7728d179d4"
+    ]
+  ]
+  [
+    "https://github.com/ocaml-dune/csexp/releases/download/1.5.1/csexp-1.5.1.tbz"
+    "csexp"
+    [
+      "sha256=d605e4065fa90a58800440ef2f33a2d931398bf2c22061a8acb7df845c0aac02"
+      "sha512=d785bbabaff9f6bf601399149ef0a42e5e99647b54e27f97ef1625907793dda22a45bf83e0e8a1eba2c63634c5484b54739ff0904ef556f5fc592efa38af7505"
+    ]
+  ]
+  [
+    "https://github.com/ocaml/dune/releases/download/3.6.1/dune-3.6.1.tbz"
+    "dune_"
+    [
+      "sha256=f1d5ac04b7a027f3d549e25cf885ebf7acc135e0291c18e6b43123a799c143ce"
+      "sha512=64714ab6155cd04bc33d693fc7a6d9d61aa7a278357eeff159df324e083914fcd556459a3945acacf1bbc3775f2232ab0c78006ab8a434dc58dcf95ffdffac52"
+    ]
+  ]
+  [
+    "https://github.com/ocaml/stdlib-shims/releases/download/0.3.0/stdlib-shims-0.3.0.tbz"
+    "stdlib-shims"
+    [
+      "sha256=babf72d3917b86f707885f0c5528e36c63fccb698f4b46cf2bab5c7ccdd6d84a"
+      "sha512=1151d7edc8923516e9a36995a3f8938d323aaade759ad349ed15d6d8501db61ffbe63277e97c4d86149cf371306ac23df0f581ec7e02611f58335126e1870980"
+    ]
+  ]
+  [
+    "https://github.com/yallop/ocaml-integers/archive/0.7.0.tar.gz"
+    "ocaml-integers"
+    ["md5=201cf24143d7cb9a3921d572b6e6c42c"]
+  ]
+]
+x-opam-monorepo-root-packages: ["x"]
+x-opam-monorepo-version: "0.3"
